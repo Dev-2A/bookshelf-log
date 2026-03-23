@@ -7,6 +7,7 @@ from backend.app.core.config import settings
 from backend.app.core.database import engine, Base
 from backend.app.models import Book, Review     # noqa: F401 - 모델 등록용
 from backend.app.api.books import router as books_router
+from backend.app.api.embedding import router as embedding_router
 
 
 @asynccontextmanager
@@ -36,6 +37,7 @@ app.add_middleware(
 
 # 라우터 등록
 app.include_router(books_router)
+app.include_router(embedding_router)
 
 
 @app.get("/")
