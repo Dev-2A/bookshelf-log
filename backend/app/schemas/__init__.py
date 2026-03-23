@@ -5,6 +5,7 @@ from backend.app.schemas.review import (
     ReviewResponse,
     ReviewWithBook,
 )
+from backend.app.schemas.graph import GraphNode, GraphEdge, GraphData
 
 __all__ = [
     "BookCreate",
@@ -14,4 +15,7 @@ __all__ = [
     "ReviewUpdate",
     "ReviewResponse",
     "ReviewWithBook",
+    "GraphNode",
+    "GraphEdge",
+    "GraphData",
 ]
