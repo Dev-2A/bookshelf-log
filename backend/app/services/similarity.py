@@ -42,7 +42,7 @@ class SimilarityService:
                 if sim >= threshold:
                     edges.append({
                         "source": reviews[i].id,
-                        "target": reviews[j].jid,
+                        "target": reviews[j].id,
                         "similarity": round(sim, 4),
                     })
         
@@ -130,7 +130,7 @@ class SimilarityService:
                 "title": book.title,
                 "author": book.author,
                 "cover_url": book.cover_url,
-                "rating": book.rating,
+                "rating": review.rating,
                 "content_preview": review.content[:100] + "..."
                 if len(review.content) > 100
                 else review.content,
